@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../img/fondo.jpg) no-repeat center top;
+    font-family: sans-serif;
+    height: 100vh;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+  
+  .login-box {
+    width: 320px;
+    height: auto;
+    background: rgba(86, 4, 102, 0.726);
+    color: #fff;
+    top: 85%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 50px 30px;
+    border-radius: 30px;
+  }
+  
+  .login-box .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: fixed;
+    top: -50px;
+    left: calc(50% - 50px);
+  }
+  
+  .login-box h1 {
+    margin: 5 ;
+    padding: 0 0 25px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .login-box h2 {
+    margin: 0;
+    padding: 0 0 50px;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .login-box label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold; /*para que sea mas remarcado*/
+    display: block;
+  }
+  /*estelizacion de los input*/
+  .login-box input {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+
+  
+  .login-box input[type="text"], 
+  .login-box input[type="password"], 
+  .login-box input[type="number"],
+  .login-box input[type="month"]{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  }
+
+  .login-box select {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  }
+
+  .login-box option{
+    background: rgba(86, 4, 102, 0.726);
+  }
+  
+  .login-box input[type="text"]::placeholder, 
+  .login-box input[type="password"]::placeholder,
+  .login-box input[type="number"]::placeholder{
+    color: #ddd;
+  }
+  
+  .login-box input[type="button"],
+  .login-box input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: rgb(122, 27, 201);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+  }
+  
+  .login-box a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgray;
+  }
+  
+  .login-box a:hover {
+    color: #fff;
+  }
+
+  .language{
+    left: 43%;
+    position: absolute;
+  }
+  
+  .en{
+    color:white;
+  }
+  
+  .es{
+    color:#00a1ff;
+  }
+  
+  .check{
+    position: relative;
+    width: 50px;
+  }
+  
+  .check:before{
+    content: " ";
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    background: #333;
+    border-radius: 25px;
+  }
+  
+  .check:after{
+    content: " ";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 25px;
+    transition: 0.25s;
+    box-sizing: border-box;
+  }
+  
+  .check:checked::after{
+    left: 25px;
+    border: 2px solid #00a1ff
+  }
+  
+  .check:checked:before{
+    background: #00a1ff
+  }

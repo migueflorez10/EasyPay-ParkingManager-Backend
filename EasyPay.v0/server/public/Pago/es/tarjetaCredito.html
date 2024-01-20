@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card</title>
+    <link rel="stylesheet" href="../CSS/masterCC.css">
+    <script src="./../../main.js" type="text/javascript"></script>
+</head>
+<body>  
+    
+    <div class="language">
+        <span class="en">Inglés</span>
+        <input type="checkbox" name="language" id="language" class="check" checked="checked">
+        <span class="es">Español</span>
+    </div>
+
+        <div class="login-box">
+        <img class="avatar"src="../img/visa.jpg" alt="Logo de EasyPay" title="PSE"> 
+        <h1>Pago con tarjeta de crédito</h1>
+        <form class="form" onsubmit="recarga()" action="" method="POST" id="topUpForm"> 
+            <div class="form-group">
+                <label for="top-up">Monto a recargar
+                    <input type="number" name="saldo" placeholder="$" id="saldo" pattern="^[0-9]{10}" value="">
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="bank">Elige tu tarjeta
+                    <br>
+                    <select name="bank" id="bank">
+                        <option value="Mastercard">Mastercard</option>
+                        <option value="Visa">Visa</option>
+                        <option value="American express">American express</option>
+                      </select>    
+                </label>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="">Numero de tarjeta
+                    <input type="number" name="" id="" placeholder="0000-0000-0000-0000" pattern="^[0-9]{10}" value="">
+                </label>
+                <label for="">CVV
+                    <input type="number" name="" id="" placeholder="Código de seguridad" pattern="^[0-9]{10}" value="">
+                </label>
+                <label for="">Fecha de vencimiento
+                    <input type="month" name="" id="" placeholder="junio-2022" pattern="^[0-9]{10}" value="2022-06">
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="username">Código de usuario
+                    <input type="number" name="id" id="id" placeholder="ID" pattern="^[0-9]{10}" value="">
+                </label>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Recargar">
+            </div>
+
+
+        </form>
+
+        <script src="../languageCc.js"></script>
+    
+</body>
+</html>

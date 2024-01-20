@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --primary-bg-color: rgb(122, 27, 201);
+    --secondary-bg-color: rgb(101, 22, 165);
+}
+
+* {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+    font-family: 'Urbanist', sans-serif;
+    z-index: 1;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    top: 12px;
+}
+
+nav {
+    display: -webkit-box;
+    z-index: 3000;
+}
+
+.nav{
+    position: fixed;
+    display: flex;
+    height: max-content;
+    background: var(--primary-bg-color);
+    width: 100%;
+    justify-content: center;
+}
+
+.nav-body {
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    max-width: 1200px;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-spacing{
+    height: 66px;
+}
+
+.nav-header {
+    font-size: 1.4rem;
+}
+
+.nav-header .logo{
+    width: 60px;
+}
+
+.nav-header .logo img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 50%;
+}
+
+.nav-tools .profile{ 
+    display: flex;
+    flex-direction: column;
+}
+
+.profile .id {
+    color: #ccc;
+    font-size: .8rem;
+    align-self: flex-end;
+}
+
+.tool {
+    display: flex;
+    cursor: pointer;
+    gap: .4rem;
+}
+
+.user-image {
+    background-color: var(--secondary-bg-color);
+    width: 32px;
+    height: 32px; 
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+
+
+/* =================================================================
+    Dashboard Styles
+================================================================= */
+
+.dashboard {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 78px);  
+    justify-content: center; 
+    align-items: center;
+}
+
+.dashboard-tools {
+    display: flex;
+    height: max-content;
+    flex-direction: column;
+    box-shadow: 2px 0px 2px rgb(190, 190, 190);
+    padding: 1.2rem 2rem;
+}
+
+.routes {
+    display: flex;
+    border: 1px solid var(--primary-bg-color);
+}
+
+.route {
+    cursor: pointer;
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.route-link {
+    text-decoration: none;
+    color: inherit;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.route-link:hover, .route.active .route-link{
+    background: var(--primary-bg-color);
+    color: white;
+}
+
+.routeViewer {
+    display: flex;
+    flex-direction: column;
+}
+
+.view {
+    padding: 1rem;
+    display: none;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.data-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+.form-group label {
+    gap: 1rem;
+    justify-content:center;
+    align-items:center;  
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input, .form-group select{
+    outline: none;
+    display: block;
+    padding: .4rem;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+}
+
+.form-group button {
+    background: var(--primary-bg-color);
+    color: white;
+    cursor: pointer;
+    padding: .8rem 1rem;
+    border: none;
+}
+
+.show-view {
+    display: block;
+}
+.pop-up.active{
+    display: flex;
+}
+
+.pop-up{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    order: 0;
+    display: none;
+    justify-content:center;
+    align-items:center;
+}
+
+.bg-pop-up{
+    background: rgb(0,0,0,0.28);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.pop-up-body{
+    background: white;
+    width: max-content;
+    padding: 1.2rem 0rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.primary-btn{
+    background: var(--primary-bg-color);
+    color: white;
+    cursor: pointer;
+    padding: .8rem 1rem;
+    border: 1px solid  var(--primary-bg-color);
+}
+
+.secondary-btn{
+    color: var(--primary-bg-color);
+    border: 1px solid var(--primary-bg-color);
+    background: white;
+    cursor: pointer;
+    padding: .8rem 1rem;
+}
+
+.pop-up-title{
+    padding: 0rem .8rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.pop-up-content{
+    padding: 0rem .8rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid rgb(204, 204, 204);
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.total{
+    text-align: center;
+}
+
+.pop-up-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 0rem .8rem;
+}
+
+.row, .headers{
+    display: flex;
+    gap: 0.6rem;
+    background: rgb(253, 253, 253);
+    border: 1px solid rgb(212, 212, 212);
+}
+
+.headers {
+    background:rgb(122, 27, 201);
+    color: white;
+}
+
+.row > *, .headers > * {
+    padding: 6px 8px;
+    text-align: left;
+}
+
+.row .id, .headers .id{
+    flex: 0 0 3ch;
+}
+
+.row .type, .headers .type{
+    flex: 0 0 8ch;
+}
+
+.row .total, .headers .total{
+    flex: 0 1 8ch;
+}
+
+.row .date, .headers .date{
+    flex: 1 0 auto;
+}
+
+.payment{
+    color: red;
+}
+
+.topup{
+    color: green;
+}
+
+.table {
+    overflow-y: scroll;
+    height: 300px;
+}
+
+.table::-webkit-scrollbar{
+    width: 10px;
+    background: rgba(243, 243, 243, 1);
+}
+
+.table::-webkit-scrollbar-thumb{
+    width: 10px;
+    background: rgba(172, 172, 172, 0.7);
+}
+
+.update {
+    animation:update 1s alternate infinite;
+}
+
+@keyframes update {
+    from {
+        background: rgb(253, 253, 253);
+    }
+
+    to {
+        background: rgb(255, 255, 165);
+    }
+}
+
+.en{
+    color:white;
+}
+
+.es{
+    color:#00a1ff;
+}
+
+.check{
+    position: relative;
+    width: 50px;
+}
+
+.check:before{
+    content: " ";
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    background: #333;
+    border-radius: 25px;
+}
+
+.check:after{
+    content: " ";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 25px;
+    transition: 0.25s;
+    box-sizing: border-box;
+}
+
+.check:checked::after{
+    left: 25px;
+    border: 2px solid #00a1ff
+}
+
+.check:checked:before{
+    background: #00a1ff
+}
+
